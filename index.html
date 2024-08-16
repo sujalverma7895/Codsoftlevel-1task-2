@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 1330px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid gray;
+        }
+
+        .subhead {
+            display: flex;
+            gap: 20px;
+        }
+
+        .subhead div {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            height: 80px;
+            width: 200px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            font-size: 16px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            color: #3c0c6c;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            background-color: rgb(48, 182, 102);
+            height: 50px;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .bgimg img {
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .bgimg div {
+            position: absolute;
+            left: 350px;
+            top: 250px;
+            text-align: center;
+        }
+
+        .bgimg div h1 {
+            color: whitesmoke;
+            font-size: 50px;
+            margin-top: -30px;
+        }
+
+        .bgimg div h5 {
+            color: whitesmoke;
+            font-size: 15px;
+        }
+
+        .section1 {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .section1 h1 {
+            font-size: 36px;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+        }
+
+        .section2 div {
+            text-align: center;
+            width: 30%;
+        }
+
+        .section2 img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .section3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #291843;
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            color: white;
+        }
+
+        .section3-inner {
+            width: 80%;
+        }
+
+        .section3-button button {
+            width: 100px;
+            height: 50px;
+            background-color: #30B666;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .section4 {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .section4-leftpart {
+            width: 48%;
+            padding: 0 10px;
+        }
+
+        .section4-rightpart {
+            width: 48%;
+        }
+
+        .section4-rightpart div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 2px solid #D8D8D8;
+        }
+
+        .section5 {
+            position: relative;
+            background-color: #30B666;
+            height: 300px;
+        }
+
+        .section5 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .section5-inner {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            top: 50px;
+        }
+
+        .section5-inner h1,
+        .section5-inner h3 {
+            color: white;
+        }
+
+        .section6 {
+            display: flex;
+            background-color: white;
+            padding: 20px;
+            margin-top: -125px;
+            background-color: transparent;
+
+        }
+
+        .section6 div {
+            margin: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .section6 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .section6 div:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section6 div:hover img {
+            transform: scale(1.1);
+        }
+
+        .section6 div::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .section6 div:hover::before {
+            opacity: 1;
+        }
+
+        .section6 button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #30B666;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .section6 div:hover button {
+            opacity: 1;
+        }
+
+        .section7anc:hover {
+            background-color: #30B666;
+            color: white;
+        }
+
+        .section7anc a {
+            text-decoration: none;
+            color: black;
+            font-size: 25px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+
+        .section7anc.active {
+            background-color: #30B666;
+            color: white;
+        }
+
+        .section7 {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 20px;
+            width: 100%;
+
+        }
+
+        .section7 div {
+            margin: 10px;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .section8 {
+            display: flex;
+            justify-content: space-between;
+            background-color: #291843;
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .section8 div {
+            width: 25%;
+            display: flex;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .section8 div i {
+            color: white;
+            font-size: 40px;
+            margin-right: 20px;
+        }
+
+        .section8 div div h1 {
+            color: whitesmoke;
+        }
+
+        .section8 div div p {
+            color: whitesmoke;
+        }
+
+        .section-blog-news {
+            padding: 50px 20px;
+            background-color: #f5f5f5;
+        }
+
+
+
+        .blog-slider-container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .blog-grid {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-item {
+            flex: 0 0 100%;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        .blog-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .blog-content {
+            padding: 20px;
+            position: relative;
+            bottom: -59px;
+            background-color: transparent;
+        }
+
+        .date {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .section-blog-news {
+        margin: 15px 0;
+            display: flex;
+        }
+
+        .blog-content h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #291843;
+        }
+        .information-section{
+            display: flex;
+            background-color: #291843;     
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+        .information-section-inner{
+            display: flex;
+            width: 100%;
+        }
+        .information-section div{
+            width: 100%;
+            text-align: center;
+            
+        }
+        .information-section div p{
+            color: whitesmoke;
+        }
+        .information-section div div{
+            color: whitesmoke;
+        }
+        .information-section div h4{
+            color: whitesmoke;
+        }
+        .information-section div h2{
+            color: whitesmoke;
+        }
+        .information-section div h3{
+            color: whitesmoke;
+        }
+        .information-section,.social-media1,a{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="subhead">
+                <div>sales@magnifysearch.com</div>
+                <div>+9187790 21579</div>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="top">
+            <div>
+                <img class="logo" src="./logo.png" alt="Logo" />
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Reports</li>
+                    <li>Resources</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <div>
+                <button>Become A Client</button>
+            </div>
+        </div>
+    </header>
+    <div class="bgimg">
+        <img src="./backgroung.jpg" alt="Background" />
+        <div>
+            <h5>Whatever your business calls, we are here to help.</h5>
+            <h1>Turning Data into Global </h1>
+            <h1>Strategies</h1>
+        </div>
+    </div>
+    <div class="section1">
+        <h5>Services we provide that</h5>
+        <h1>Impact your business decisions</h1>
+    </div>
+    <div class="section2">
+        <div>
+            <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/1.png" alt="Service Icon" />
+            <h4>Consulting Services</h4>
+            <p>We can help you create a roadmap to maximize your revenue and minimize your operational costs.</p>
+        </div>
+        <div>
+            <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/02.png" alt="Service Icon" />
+            <h4>Consulting Services</h4>
+            <p>We can help you create a roadmap to maximize your revenue and minimize your operational costs.</p>
+        </div>
+        <div>
+            <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/03.png" alt="Service Icon" />
+            <h4>Consulting Services</h4>
+            <p>We can help you create a roadmap to maximize your revenue and minimize your operational costs.</p>
+        </div>
+    </div>
+    <div class="section2">
+        <div>
+            <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/4.png" alt="Service Icon" />
+            <h4>Consulting Services</h4>
+            <p>We can help you create a roadmap to maximize your revenue and minimize your operational costs.</p>
+        </div>
+        <div>
+            <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/05.png" alt="Service Icon" />
+            <h4>Consulting Services</h4>
+            <p>We can help you create a roadmap to maximize your revenue and minimize your operational costs.</p>
+        </div>
+        <div>
+            <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/06.png" alt="Service Icon" />
+            <h4>Consulting Services</h4>
+            <p>We can help you create a roadmap to maximize your revenue and minimize your operational costs.</p>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="section3-inner">
+            <h1>Ready to get started?</h1>
+            <h3>Without clarity, you send a very garbled message out to the Universe.</h3>
+        </div>
+        <div class="section3-button">
+            <button>Get Started</button>
+        </div>
+    </div>
+    <div class="section4">
+        <div class="section4-leftpart">
+            <h1>Get all Industry Analysis and Market Trends on the move</h1>
+            <p>From Ecosystem Analysis to Sustainability Insights, Industry Benchmarking to Market Estimation, we
+                provide knowledge-powered solutions that you need to transform business priorities into impactful return
+                on investment.</p>
+        </div>
+        <div class="section4-rightpart">
+            <div>
+                <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/benchmark-icon.png"
+                    alt="Feature Icon" />
+                <h3>Analyze, Prioritize, Implement, and Grow with Insightful Analyst recommendations</h3>
+            </div>
+            <div>
+                <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/benchmark.png"
+                    alt="Feature Icon" />
+                <h3>Benchmarking Industries, Technologies, and Mega-trends</h3>
+            </div>
+            <div>
+                <img src="https://magnifysearch.com/storage/images/front/service/feature-icon/depict-icon1.png"
+                    alt="Feature Icon" />
+                <h3>Intriguing Visualization with storytelling elements to give pinpoint Insights</h3>
+            </div>
+        </div>
+    </div>
+    <div class="section5">
+        <img src="https://magnifysearch.com/storage/images/front/bg/pattern-01.png" alt="Pattern Background" />
+        <div class="section5-inner">
+            <h3>What We'll Do</h3>
+            <h1>Our Recent Case Studies</h1>
+        </div>
+    </div>
+    <div class=" section6">
+        <div>
+            <div>
+                <img src="https://magnifysearch.com/storage/images/front/case-study/01.jpg" />
+            </div>
+            <h6>Market Trends</h6>
+            <h2>Competing in a highly organized environment</h2>
+        </div>
+        <div>
+            <div>
+                <img src="https://magnifysearch.com/storage/images/front/case-study/02.jpg" />
+            </div>
+            <h6>Blogs</h6>
+            <h2>Promoting innovation through property rights</h2>
+        </div>
+        <div>
+            <div>
+                <img src="https://magnifysearch.com/storage/images/front/case-study/03.jpg" />
+            </div>
+            <h6>Case Study</h6>
+            <h2>Responding positively to a changing situation</h2>
+        </div>
+    </div>
+    <div class="section7">
+        <div class="section7anc">
+            <div><a href="">Insights & Innovation</a></div>
+            <div><a href="">Market Analysis</a></div>
+            <div><a href="">Competitive Intelligence</a></div>
+            <div><a href="">Strategy & Planning</a></div>
+        </div>
+        <div>
+            <img src="https://magnifysearch.com/storage/images/front/about/market%20analysis.png" />
+        </div>
+        <div>
+            <h1>Market Analysis</h1>
+            <div>Quantitative Analysis</div>
+            <div> Ecosystem/Value Chain Analysis</div>
+            <div>SWOT Analysis</div>
+            <div>Market Segmentation Analysis</div>
+            <div> Customer Profiles/Personas</div>
+            <div>Data Dashboards</div>
+        </div>
+    </div>
+    <div class="section8">
+        <div>
+            <i class="fas fa-clock"></i>
+            <div>
+                <h1>6</h1>
+                <p> + Years of Experience</p>
+            </div>
+        </div>
+        <div>
+            <i class="fas fa-bullseye"></i>
+            <div>
+                <h1>100</h1>
+                <p> + Reports Completed</p>
+            </div>
+        </div>
+        <div>
+            <i class="fas fa-clock"></i>
+            <div>
+                <h1>6</h1>
+                <p> + Years of Experience</p>
+            </div>
+        </div>
+        <div>
+            <i class="fas fa-bullseye"></i>
+            <div>
+                <h1>100</h1>
+                <p> + Reports Completed</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-blog-news">
+        <div>
+            <h2 class="section-title">Blog & News</h2>
+            <h1 class="main-title">Fresh Magnify Search latest news</h1>
+            <p class="description">
+                For those of you who are serious about having more, doing more, giving more and being more, success is
+                achievable with some understanding of what to do, some discipline around planning
+            </p>
+            <p>Like what you see? <a href="#" class="see-more">See more posts</a></p>
+
+        </div>
+        <div class="blog-slider-container">
+            <div class="blog-grid">
+                <div class="blog-item">
+                    <img src="https://magnifysearch.com/storage/images/blog/1676183845_Metalworking_Fluid.jpg"
+                        alt="Blog post image">
+                    <div class="blog-content">
+                        <span class="date">2023, December 7</span>
+                        <h3>Google's Gemini Unveiled: Pioneering AI Across Industries with Responsible Innovation</h3>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <img src="https://magnifysearch.com/storage/images/blog/1701941722_Gemini_(1).png"
+                        alt="Blog post image">
+                    <div class="blog-content">
+                        <span class="date">2023, February 12</span>
+                        <h3>Contemporary Trends and the Future Landscape of Adhesives and Sealants</h3>
+                    </div>
+                </div>
+                <!-- Add more blog items as needed -->
+            </div>
+        </div>
+    </div>
+    <div class="information-section">
+        <div>
+            <h3>Where To Find Us </h3>
+            <p> Lok Upvan, Phase 2,</p>
+            <P>Mumbai, Maharashtra, India (400606) </P>
+            <p> sales@magnifysearch.com</p>
+            <p> +9182639 21042</p>
+            <p> +9187790 21579</p>
+            <P> 24 X 7 Online Support</P>
+        </div>
+        <div class="information-section-inner">
+            <div>
+                <h4>Discover</h4>
+                <div> About us</div>
+                <div> Contect us</div>
+                <div> Blog</div>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <div> Syndicated Research Services</div>
+                <div> Consult/ Advisory Services</div>
+                <div> Market Trends</div>
+                <div>Case Study</div>
+            </div>
+        </div>
+        <div>
+            <h2>Contect</h2>
+            <div class="social-media1">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+        const blogGrid = document.querySelector('.blog-grid');
+        const blogItems = blogGrid.querySelectorAll('.blog-item');
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % blogItems.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const offset = -currentIndex * (blogItems[0].offsetWidth + 20); // 20px for margin
+            blogGrid.style.transform = `translateX(${offset}px)`;
+        }
+
+        // Clone the first item and append it to the end for seamless looping
+        blogGrid.appendChild(blogItems[0].cloneNode(true));
+
+        // Start the slider
+        setInterval(nextSlide, 2000);
+    </script>
+
+
+</body>
+
+</html>
